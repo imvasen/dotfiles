@@ -29,9 +29,6 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=vim
 export GPG_TTY=$(tty)
 
-myip() { dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}' }
-h() { curl cheat.sh/$1 }
-
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 

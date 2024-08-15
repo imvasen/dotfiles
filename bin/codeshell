@@ -1,0 +1,4 @@
+#!/bin/sh
+
+SESSION="vscode/`md5sum <<< $(pwd) | awk '{print $1}' | grep -o '....$'`"
+tmux attach-session -d -t $SESSION || tmux new-session -s $SESSION
