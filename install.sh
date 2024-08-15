@@ -20,3 +20,8 @@ cp git/.gitconfig ~
 mkdir -p ~/.bin
 cp bin/* ~/.bin
 chmod +x ~/.bin/*
+
+# tmux
+git clone https://github.com/gpakosz/.tmux.git ~/.tmux
+ln -s -f ~/.tmux/.tmux.conf ~
+cp ~/.tmux/.tmux.conf.local ~

@@ -24,6 +24,12 @@ Some utilities are contained in bin:
 - `myip` - Shows your public IP
 - `tma` - Creates a tmux session (e.g. `tma session-name`).
 
+## tmux
+
+I use tmux a lot. It comes handy when doing any kind of terminal stuff. My
+preferred flavor is the one [Grégory Pakosz][gregory] adds. I found his
+[tmux repo][gregory-tmux] superb.
+
 ## Thanks
 
 This repository was inspired by [Adam's dotfiles][adam-dotfiles]. I borrowed
@@ -31,4 +37,10 @@ some of the configs he had, made some tweaks to suit my preferences and I also
 added some configs of my own. A significant portion of the code here is based on
 his original project.
 
-- [adam-dotfiles]: https://github.com/ahawkins/dotfiles
+Special mentions to:
+
+- [Grégory Pakosz][gregory].
+
+[adam-dotfiles]: https://github.com/ahawkins/dotfiles
+[gregory]: https://github.com/gpakosz
+[gregory-tmux]: https://github.com/gpakosz/.tmux
