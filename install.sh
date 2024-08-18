@@ -27,4 +27,4 @@ chmod +x ~/.bin/*
 # tmux
 git clone https://github.com/gpakosz/.tmux.git ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf ~
-cp ~/.tmux/.tmux.conf.local ~
+cp tmux/.tmux.conf.local ~
