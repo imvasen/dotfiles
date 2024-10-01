@@ -1,0 +1,17 @@
+#!/bin/bash -
+
+# Opens vim from stdin with the syntax highlighted for
+# specified filetype
+#
+# Usage:
+#   some_command_outputs_json | vimf json
+#   some_command_outputs_js | vimf js
+
+
+if [[ "$1" == "json" ]]
+then
+  cat - | jq | vim -c "set filetype=$1" -
+else
+  vim -c "set filetype=$1" -
+fi
+

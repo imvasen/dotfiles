@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Note: This script is very specific for my work,
+#   so, it might not be for general public
+# 
+# Makes a request to skybox API with my default params
+# and pipes the output to vim
+# 
+# Usage:
+#   sb /invoices/<id>
+
+endpoint=$1
+
+# curl --silent "https://skybox.vividseats.com/services$endpoint" \
+#   --header "X-Api-Token: $SB_API_TOKEN" \
+#   --header "X-Application-Token: $SB_APP_TOKEN" \
+#   --header "Accept: application/json" \
+#   --header "Cache-Control: no-cache" \
+#   --header "Accept-Encoding: application/json" \
+#   --header "Content-Type: application/json" \
+#   --header "X-Account: $SB_ACCOUNT" | vimf json
+
+xh https://skybox.vividseats.com/services$endpoint \
+  X-Api-Token:$SB_API_TOKEN \
+  X-Application-Token:$SB_APP_TOKEN \
+  Accept:application/json \
+  Cache-Control:no-cache \
+  Accept-Encoding:application/json \
+  Content-Type:application/json \
+  X-Account:$SB_ACCOUNT | vimf json
+
