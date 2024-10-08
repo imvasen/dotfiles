@@ -1,12 +1,8 @@
 #!/bin/bash -
 
-# Opens vim from stdin with the syntax highlighted for
-# specified filetype
-#
-# Usage:
-#   some_command_outputs_json | vimf json
-#   some_command_outputs_js | vimf js
-
+# Opens vim with the specified filetype from a pipe
+# Example: curl https://api.example.com | vimf json
+# Example: cat index.html | vimf html
 
 if [[ "$1" == "json" ]]
 then
@@ -14,4 +10,3 @@ then
 else
   vim -c "set filetype=$1" -
 fi
-
