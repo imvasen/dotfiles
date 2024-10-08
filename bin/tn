@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Takes in a Ticket Network Event API endpoint and outputs the response in JSON format
+# Note: This script might not be for all people, unless for some reason you use TN api?
+# Takes endpoint as an argument
+# Example: tn /event/venue/<event_id>
+
+endpoint=$1
+
+xh https://www.tn-apis.com/event/v4$endpoint \
+  "Authorization:$TN_API_TOKEN" \
+  "Accept: application/json" \
+  "X-Identity-Context: $TN_IDENTITY" | vimf json
