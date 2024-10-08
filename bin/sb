@@ -1,24 +1,11 @@
 #!/bin/bash
 
-# Note: This script is very specific for my work,
-#   so, it might not be for general public
-# 
-# Makes a request to skybox API with my default params
-# and pipes the output to vim
-# 
-# Usage:
-#   sb /invoices/<id>
+# Takes in a Skybox endpoint and outputs the response in JSON format
+# Note: This script might not be for all people, unless for some reason you use skybox api?
+# Takes endpoint as an argument
+# Example: sb /event/<event_id>
 
 endpoint=$1
-
-# curl --silent "https://skybox.vividseats.com/services$endpoint" \
-#   --header "X-Api-Token: $SB_API_TOKEN" \
-#   --header "X-Application-Token: $SB_APP_TOKEN" \
-#   --header "Accept: application/json" \
-#   --header "Cache-Control: no-cache" \
-#   --header "Accept-Encoding: application/json" \
-#   --header "Content-Type: application/json" \
-#   --header "X-Account: $SB_ACCOUNT" | vimf json
 
 xh https://skybox.vividseats.com/services$endpoint \
   X-Api-Token:$SB_API_TOKEN \
