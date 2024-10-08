@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# This script takes a look at ~/.ssh/config and
-# prints all the hosts listed in that file by name
-# without showing IP or credentials
+# Outputs the hosts in the ssh config file
 
 grep "Host " ~/.ssh/config
