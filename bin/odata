@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Takes in parameters to output a query string for an OData request
+#   -f: Filter (e.g. "name eq 'John'")
+#   -p: Page number
+#   -P: Per page
+#
+# Example: odata -f "name eq 'John'" -p 1 -P 10
+# Example: curl https://api.example.com/odata/People$(odata -f "name eq 'John'" -p 1 -P 10)
+
+OPTSTRING="f:p:P:"
+
+query=""
+counter=0
+
+while getopts ${OPTSTRING} opt; do
+  if [[ counter -eq 0 ]];
+  then
+    query="?"
+  else
+    query="$query&"
+  fi
+
+  ((counter++))
+
+  case ${opt} in
+    f)
+      # Filter
+      arg=${OPTARG}
+      filter=$(printf '$filter=%s' "${arg// /%20}")
+      query="$query$filter"
+      ;;
+    p)
+      # Page
+      page="page=${OPTARG}"
+      query="$query$page"
+      ;;
+    P)
+      # Per page
+      pPage="perPage=${OPTARG}"
+      query="$query$pPage"
+      ;;
+  esac
+done
+
+printf %s $query
