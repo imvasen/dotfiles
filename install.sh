@@ -8,6 +8,7 @@ echo "Running installation"
 brew bundle
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+curl -sfL https://raw.githubusercontent.com/ducaale/xh/master/install.sh | sh
 
 # Zsh
 cp ~/.zshrc ~/.zshrc.bkp
