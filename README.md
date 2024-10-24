@@ -23,6 +23,7 @@ Some utilities are contained in bin:
 - `hot` - Flip a coin.
 - `myip` - Shows your public IP
 - `tma` - Creates a tmux session (e.g. `tma session-name`).
+- nvim
 
 ## tmux
 
@@ -32,14 +33,12 @@ preferred flavor is the one [Grégory Pakosz][gregory] adds. I found his
 
 ## Thanks
 
-This repository was inspired by [Adam's dotfiles][adam-dotfiles]. I borrowed
-some of the configs he had, made some tweaks to suit my preferences and I also
-added some configs of my own. A significant portion of the code here is based on
-his original project.
+This repository was inspired by all those open source dotfiles around.
 
 Special mentions to:
 
 - [Grégory Pakosz][gregory].
+- [Adam Hawkins][adam-dotfiles]
 
 [adam-dotfiles]: https://github.com/ahawkins/dotfiles
 [gregory]: https://github.com/gpakosz
