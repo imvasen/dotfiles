@@ -5,14 +5,36 @@
 # Takes endpoint as an argument
 # Example: sb /event/<event_id>
 
-endpoint=$1
+api_call() {
+  xh https://skybox.vividseats.com/services$1 \
+    X-Api-Token:$SB_API_TOKEN \
+    X-Application-Token:$SB_APP_TOKEN \
+    Accept:application/json \
+    Cache-Control:no-cache \
+    Accept-Encoding:application/json \
+    Content-Type:application/json \
+    X-Account:$SB_ACCOUNT
+}
 
-xh https://skybox.vividseats.com/services$endpoint \
-  X-Api-Token:$SB_API_TOKEN \
-  X-Application-Token:$SB_APP_TOKEN \
-  Accept:application/json \
-  Cache-Control:no-cache \
-  Accept-Encoding:application/json \
-  Content-Type:application/json \
-  X-Account:$SB_ACCOUNT | vimf json
+OPTSTRING=":p"
 
+plain=0
+
+while getopts ${OPTSTRING} opt; do
+  case ${opt} in
+    p)
+      plain=1
+      shift;;
+    ?)
+      echo "Invalid option: -${OPTARG}"
+      exit 1
+      ;;
+  esac
+done
+
+if [[ plain -eq 0 ]];
+then
+  api_call $1 | nvf json
+else
+  api_call $1
+fi

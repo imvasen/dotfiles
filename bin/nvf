@@ -1,0 +1,8 @@
+#!/bin/bash -
+
+if [[ "$1" == "json" ]]
+then
+  jq | nvim -c "set filetype=$1" -
+else
+  nvim -c "set filetype=$1" -
+fi

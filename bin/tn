@@ -5,9 +5,39 @@
 # Takes endpoint as an argument
 # Example: tn /event/venue/<event_id>
 
-endpoint=$1
+api_call() {
+				xh https://www.tn-apis.com/event/v4$1 \
+								"Authorization:$TN_API_TOKEN" \
+								"Accept: application/json" \
+								"X-Identity-Context: $TN_IDENTITY"
+}
 
-xh https://www.tn-apis.com/event/v4$endpoint \
-  "Authorization:$TN_API_TOKEN" \
-  "Accept: application/json" \
-  "X-Identity-Context: $TN_IDENTITY" | vimf json
+OPTSTRING=":hp"
+
+plain=0
+
+while getopts ${OPTSTRING} opt; do
+  case ${opt} in
+    p)
+      plain=1
+      shift;;
+    h)
+      printf "Usage tn [-p for plain] <endpoint>\n\n"
+      printf "Endpoints:\n"
+      printf "\t- /events/events\n"
+      printf "\t- /events/venues\n"
+      exit 0
+      ;;
+    ?)
+      echo "Invalid option: -${OPTARG}"
+      exit 1
+      ;;
+  esac
+done
+
+if [[ plain -eq 0 ]];
+then
+  api_call $1 | nvf json
+else
+  api_call $1
+fi
