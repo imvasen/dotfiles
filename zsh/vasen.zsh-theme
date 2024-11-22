@@ -1,5 +1,7 @@
 # Keep these as ref:         
 
+# Note: Not used now
+
 local icon=""
 
 if [[ "$OSTYPE" =~ "darwin" ]]; then

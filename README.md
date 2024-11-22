@@ -23,7 +23,7 @@ Some utilities are contained in bin:
 - `hot` - Flip a coin.
 - `myip` - Shows your public IP
 - `tma` - Creates a tmux session (e.g. `tma session-name`).
-- nvim
+- `nv` - NeoVim
 
 ## tmux
 

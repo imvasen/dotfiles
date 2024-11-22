@@ -7,16 +7,17 @@ echo "Running installation"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew bundle
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-curl -sfL https://raw.githubusercontent.com/ducaale/xh/master/install.sh | sh
-
 mkdir -p ~/.config
 
 # Zsh
-cp ~/.zshrc ~/.zshrc.bkp
+[[ ! -f ~/.zshrc ]] || cp ~/.zshrc ~/.zshrc.bkp
+[[ ! -f ~/.zshenv ]] || cp ~/.zshenv ~/.zshenv.bkp
+[[ ! -f ~/.zprofile ]] || cp ~/.zprofile ~/.zprofile.bkp
+
 cp zsh/.zshrc ~
 cp zsh/.zprofile ~
-cp zsh/vasen.zsh-theme ~/.oh-my-zsh/themes
+cp zsh/.zshenv ~
+cp zsh/.p10k.zsh ~
 
 # neovim
 cp -r nvim ~/.config
