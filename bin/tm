@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Assign argument sent as session name
+session="$1"
+# Assign 0 if no session was sent
+if [ -z "$1" ]; then
+	session="0"
+fi
+
+if tmux ls 2>/dev/null | grep $session; then
+	# If session already exists attach it
+	tmux attach -t $session
+else
+	tmux new -s $session
+fi
