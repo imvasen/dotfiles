@@ -36,12 +36,12 @@ alias pi='pnpm install -C'
 alias pf='pnpm --filter'
 alias prun='pnpm -C'
 alias piw='pnpm -w install'
-alias ls='ls --color'
-alias l='ls -la'
+alias ls='eza'
+alias l='eza -la'
 alias g=git
 alias z=cd
 
-export GPG_TTY=$(tty)
+export GPG_TTY="$TTY"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -49,16 +49,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # pnpm
-export PNPM_HOME="/Users/ivasen/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ivasen/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ivasen/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ivasen/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ivasen/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 
 # Obstack
@@ -77,14 +72,13 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-bindkey -e
 bindkey "^[[A" history-search-backward # Up
 bindkey "^[[B" history-search-forward # Down
 
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza $realpath'
 zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 
 eval "$(fzf --zsh)"
