@@ -1,5 +1,7 @@
 export EDITOR=nvim
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
+export LC_ALL=en_US.UTF-8
+
 
 # Created by `pipx` on 2024-09-05 23:53:13
 export PATH="$PATH:$HOME/.local/bin"
