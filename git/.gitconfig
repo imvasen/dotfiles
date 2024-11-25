@@ -59,6 +59,15 @@
 
 	t = tree
 
+	wt = worktree
+	wta = worktree add
+	wtr = worktree remove
+
+	decrypt = crypt unlock /Users/vasen/.keys/git-crypt/keys/default
+	encrypt = crypt lock
+	dc = crypt unlock /Users/vasen/.keys/git-crypt/keys/default
+	ec = crypt lock
+
 [branch]
 	# git checkout -t <branch> will use --rebase with all future pulls
 	autosetuprebase = always
@@ -73,7 +82,6 @@
 
 [core]
 	fsmonitor = true
-	untrackedcache = true
 	pager = delta
 	editor = vim
 
