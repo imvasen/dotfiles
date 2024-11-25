@@ -32,6 +32,6 @@ cp bin/* ~/.bin
 chmod +x ~/.bin/*
 
 # tmux
-git clone https://github.com/gpakosz/.tmux.git ~/.tmux
-ln -s -f ~/.tmux/.tmux.conf ~
-cp tmux/.tmux.conf.local ~
+cp tmux/.tmux.conf ~
+mkdir -p ~/.tmux/plugins
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
