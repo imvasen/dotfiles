@@ -346,7 +346,7 @@
 
   # Untracked files icon. It's really a question mark, your font isn't broken.
   # Change the value of this parameter to show a different icon.
-  typeset -g POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
+  typeset -g POWERLEVEL9K_VCS_UNTRACKED_ICON='󱓊 '
 
   # Formatter for Git status.
   #
@@ -424,7 +424,7 @@
 
     if (( VCS_STATUS_COMMITS_AHEAD || VCS_STATUS_COMMITS_BEHIND )); then
       # <42 if behind the remote.
-      (( VCS_STATUS_COMMITS_BEHIND )) && res+=" ${clean}<${VCS_STATUS_COMMITS_BEHIND}"
+      (( VCS_STATUS_COMMITS_BEHIND )) && res+=" ${clean} ${VCS_STATUS_COMMITS_BEHIND}"
       # >42 if ahead of the remote; no leading space if also behind the remote: <42>42.
       (( VCS_STATUS_COMMITS_AHEAD && !VCS_STATUS_COMMITS_BEHIND )) && res+=" "
       (( VCS_STATUS_COMMITS_AHEAD  )) && res+="${clean} ${VCS_STATUS_COMMITS_AHEAD}"
@@ -445,7 +445,7 @@
     # ~42 if have merge conflicts.
     (( VCS_STATUS_NUM_CONFLICTED )) && res+=" ${conflicted}󱓌 ${VCS_STATUS_NUM_CONFLICTED}"
     # +42 if have staged changes.
-    (( VCS_STATUS_NUM_STAGED     )) && res+=" ${modified}󱓊 ${VCS_STATUS_NUM_STAGED}"
+    (( VCS_STATUS_NUM_STAGED     )) && res+=" ${modified}󱓏 ${VCS_STATUS_NUM_STAGED}"
     # !42 if have unstaged changes.
     (( VCS_STATUS_NUM_UNSTAGED   )) && res+=" ${modified}󱓋 ${VCS_STATUS_NUM_UNSTAGED}"
     # ?42 if have untracked files. It's really a question mark, your font isn't broken.
