@@ -1,5 +1,5 @@
 require('config.lazy')
-
+require('lualine').setup()
 -- Neovim init.lua
 -- nvim-tree recommends disabling netrw, VIM's built-in file explorer
 vim.g.loaded_netrw = 1
@@ -23,6 +23,11 @@ vim.o.cursorline = true
 
 -- sudo write
 vim.keymap.set('c', 'w!!', "w !sudo tee >/dev/null %", { silent = true })
+vim.keymap.set('n', '<M-p>', ':Telescope find_files<CR>', { silent = true })
+
+vim.keymap.set('n', '<leader>q', ':q<CR>', { silent = true })
+vim.keymap.set('n', '<leader>Q', ':q!<CR>', { silent = true })
+vim.keymap.set('n', '<leader>w', ':w<CR>', { silent = true })
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
@@ -37,9 +42,3 @@ vim.g.loaded_netrwPlugin = 1
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
 
-require('nvim-treesitter.configs').setup({
-  ensure_installed = { "lua", "markdown", "python", "typescript", "javascript" },
-  highlight = {
-    enable = true
-  }
-})
