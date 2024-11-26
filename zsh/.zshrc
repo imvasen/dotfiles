@@ -24,7 +24,10 @@ zinit light Aloxaf/fzf-tab
 
 autoload -Uz compinit && compinit
 
+autoload -U select-word-style
+select-word-style bash
 bindkey -e
+bindkey "\e[3~" delete-char
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

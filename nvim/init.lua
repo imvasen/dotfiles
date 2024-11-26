@@ -17,6 +17,7 @@ vim.cmd 'set number'
 vim.cmd 'syntax on'
 vim.cmd [[ colorscheme tokyonight-night ]]
 vim.cmd 'set directory^=$HOME/.config/nvim/tmp//'
+vim.cmd 'nmap <Bs> <S-x>'
 
 vim.o.cursorline = true
 
