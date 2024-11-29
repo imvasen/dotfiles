@@ -41,8 +41,8 @@ alias pi='pnpm install -C'
 alias pf='pnpm --filter'
 alias prun='pnpm -C'
 alias piw='pnpm -w install'
-alias ls='eza'
-alias l='eza -la'
+alias ls='eza --icons=always'
+alias l='eza -la --icons=always'
 alias g=git
 alias z=cd
 
