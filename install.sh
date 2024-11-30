@@ -9,6 +9,9 @@ brew bundle
 
 mkdir -p ~/.config
 
+# My terminal
+cp wezterm/.wezterm.lua ~
+
 # Zsh
 [[ ! -f ~/.zshrc ]] || cp ~/.zshrc ~/.zshrc.bkp
 [[ ! -f ~/.zshenv ]] || cp ~/.zshenv ~/.zshenv.bkp
