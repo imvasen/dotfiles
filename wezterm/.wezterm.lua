@@ -25,4 +25,7 @@ config.macos_window_background_blur = 30
 -- colors
 config.color_scheme = "tokyonight_night"
 
+config.default_cursor_style = "BlinkingUnderline"
+config.cursor_blink_rate = 250
+
 return config
