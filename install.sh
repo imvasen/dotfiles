@@ -38,3 +38,5 @@ chmod +x ~/.bin/*
 cp tmux/.tmux.conf ~
 mkdir -p ~/.tmux/plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+mkdir -p ~/.config/tmux
+cp tmux/tmux-nerd-font-window-name.yml ~/.config/tmux
