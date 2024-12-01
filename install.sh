@@ -27,7 +27,7 @@ cp zsh/.p10k.zsh ~
 cp -r nvim ~/.config
 
 # Git Config
-cp ~/.gitconfig ~/.gitconfig.bkp
+[[ ! -f ~/.gitconfig ]] || cp ~/.gitconfig ~/.gitconfig.bkp
 cp git/.gitconfig ~
 
 # Installing bin
