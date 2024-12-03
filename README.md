@@ -31,6 +31,10 @@ I use tmux a lot. It comes handy when doing any kind of terminal stuff. My
 preferred flavor is the one [Grégory Pakosz][gregory] adds. I found his
 [tmux repo][gregory-tmux] superb.
 
+> In order for tmux to work with treemux extension, you need to install
+> `pynvim` in your python environment. For MacOS with brew, you can use:
+> `pip --break-system-packages install pynvim`.
+
 ## Thanks
 
 This repository was inspired by all those open source dotfiles around.
