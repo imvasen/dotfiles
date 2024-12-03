@@ -60,6 +60,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+export PATH="$PATH:/opt/homebrew/opt/mysql-client@8.4/bin"
 
 # Obstack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
