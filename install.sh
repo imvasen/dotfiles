@@ -41,3 +41,7 @@ mkdir -p ~/.tmux/plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 mkdir -p ~/.config/tmux
 cp tmux/tmux-nerd-font-window-name.yml ~/.config/tmux
+
+# Karabiner
+mkdir -p ~/.config/karabiner
+cp karabiner/karabiner.json ~/.config/karabiner
