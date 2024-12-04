@@ -19,6 +19,11 @@ config.window_padding = {
 config.keys = {
   { key = 'End', action = wezterm.action.SendKey { mods = 'CTRL', key = 'E' } },
   { key = 'Home', action = wezterm.action.SendKey { mods = 'CTRL', key = 'A' } },
+  -- opt arrow move by word
+  { key = 'LeftArrow', mods = 'ALT', action = wezterm.action.SendKey { mods = 'ALT', key = 'B' } },
+  { key = 'RightArrow', mods = 'ALT', action = wezterm.action.SendKey { mods = 'ALT', key = 'F' } },
+  { key = 'UpArrow', mods = 'ALT', action = wezterm.action.SendKey { mods = 'ALT', key = '{' } },
+  { key = 'DownArrow', mods = 'ALT', action = wezterm.action.SendKey { mods = 'ALT', key = '}' } },
 }
 
 config.macos_window_background_blur = 30
