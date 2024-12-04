@@ -54,7 +54,8 @@
 
 	st = status -sb
 
-	s = stash -u
+  s = stash push
+  sa = stash -u
 	sp = stash pop
 
 	t = tree
