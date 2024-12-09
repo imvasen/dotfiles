@@ -32,6 +32,7 @@ vim.keymap.set('i', '<C-e>', '<End>')
 vim.keymap.set('n', '<leader>q', ':q<CR>', { silent = true })
 vim.keymap.set('n', '<leader>Q', ':q!<CR>', { silent = true })
 vim.keymap.set('n', '<leader>w', ':w<CR>', { silent = true })
+vim.keymap.set('n', '<leader>U', ':Lazy sync<CR>', { silent = true })
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
