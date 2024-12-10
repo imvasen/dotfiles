@@ -16,6 +16,10 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
+# Share history
+setopt inc_append_history
+setopt inc_append_history_time
+
 # ZSH Plugins
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
