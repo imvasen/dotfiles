@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Attaches to the tmux session specified in command
+# Usage
+#   - tsh host session-name
+
+ssh $1 "TERM=tmux-256color tmux attach -t $2 || tmux new -s $2"
