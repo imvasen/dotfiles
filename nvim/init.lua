@@ -1,6 +1,7 @@
 require('config.lazy')
 require('lualine').setup()
 require('config.lsp')
+require('config.harpoon')
 
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
@@ -30,10 +31,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 -- sudo write
 vim.keymap.set('c', 'w!!', "w !sudo tee >/dev/null %", { silent = true })
 vim.keymap.set('n', '<M-p>', ':Telescope find_files<CR>', { silent = true })
-vim.keymap.set('n', '<C-a>', '<Home>')
-vim.keymap.set('i', '<C-a>', '<Home>')
-vim.keymap.set('n', '<C-e>', '<End>')
-vim.keymap.set('i', '<C-e>', '<End>')
 
 vim.keymap.set('n', '<leader>q', ':q<CR>', { silent = true })
 vim.keymap.set('n', '<leader>Q', ':q!<CR>', { silent = true })
