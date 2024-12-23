@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 
 -- Ligatures => == -> !== -> != -> <= -> >=
 config.font = wezterm.font('CaskaydiaCove Nerd Font', { weight = 'Regular' })
-config.font_size = 18
+config.font_size = 16
 
 config.enable_tab_bar = false
 
@@ -17,13 +17,13 @@ config.window_padding = {
 
 -- key mappings
 config.keys = {
-  { key = 'End', action = wezterm.action.SendKey { mods = 'CTRL', key = 'E' } },
-  { key = 'Home', action = wezterm.action.SendKey { mods = 'CTRL', key = 'A' } },
+  -- { key = 'End', action = wezterm.action.SendKey { mods = 'CTRL', key = 'E' } },
+  -- { key = 'Home', action = wezterm.action.SendKey { mods = 'CTRL', key = 'A' } },
   -- opt arrow move by word
-  { key = 'LeftArrow', mods = 'ALT', action = wezterm.action.SendKey { mods = 'ALT', key = 'B' } },
+  { key = 'LeftArrow',  mods = 'ALT', action = wezterm.action.SendKey { mods = 'ALT', key = 'B' } },
   { key = 'RightArrow', mods = 'ALT', action = wezterm.action.SendKey { mods = 'ALT', key = 'F' } },
-  { key = 'UpArrow', mods = 'ALT', action = wezterm.action.SendKey { mods = 'ALT', key = '{' } },
-  { key = 'DownArrow', mods = 'ALT', action = wezterm.action.SendKey { mods = 'ALT', key = '}' } },
+  { key = 'UpArrow',    mods = 'ALT', action = wezterm.action.SendKey { mods = 'ALT', key = '{' } },
+  { key = 'DownArrow',  mods = 'ALT', action = wezterm.action.SendKey { mods = 'ALT', key = '}' } },
 }
 
 config.macos_window_background_blur = 30

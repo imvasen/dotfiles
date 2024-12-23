@@ -9,6 +9,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle
 
 mkdir -p ~/.config
+mkdir -p ~/.installed-stuff
 
 # My terminal
 cp wezterm/.wezterm.lua ~
@@ -45,3 +46,7 @@ cp tmux/tmux-nerd-font-window-name.yml ~/.config/tmux
 # Karabiner
 mkdir -p ~/.config/karabiner
 cp karabiner/karabiner.json ~/.config/karabiner
+
+git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git ~/.installed-stuff/pokemon-colorscripts
+chmod +x ~/.installed-stuff/pokemon-colorscripts/pokemon-colorscripts/pokemon-colorscripts
+sudo ./~/.installed-stuff/pokemon-colorscripts/pokemon-colorscripts/install.sh

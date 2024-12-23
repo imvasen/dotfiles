@@ -73,16 +73,15 @@ return {
             }, cmd)
           end, cmds)
         end,
+        { section = "startup" },
         {
-          pane = 2,
           section = "terminal",
-          cmd = "pokemon-colorscripts -r --no-title",
+          cmd = "echo '\n\n';pokemon-colorscripts -rn $FAV_POKEMONS --no-title",
           height = 30,
-          padding = 1,
-          indent = 4,
+          padding = 4,
+          indent = 10,
           random = 10,
         },
-        { section = "startup" },
       },
     },
 
