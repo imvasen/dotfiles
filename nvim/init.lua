@@ -37,7 +37,9 @@ vim.keymap.set('i', '<C-e>', '<End>')
 
 vim.keymap.set('n', '<leader>q', ':q<CR>', { silent = true })
 vim.keymap.set('n', '<leader>Q', ':q!<CR>', { silent = true })
-vim.keymap.set('n', '<leader>w', ':w<CR>', { silent = true })
+vim.keymap.set('n', '<leader>ww', ':w<CR>', { silent = true })
+vim.keymap.set('n', '<leader>wq', ':wq<CR>', { silent = true })
+vim.keymap.set('n', '<leader>W', ':w!!<CR>', { silent = true })
 vim.keymap.set('n', '<leader>U', ':Lazy sync<CR>', { silent = true })
 
 vim.opt.tabstop = 2
@@ -59,4 +61,3 @@ vim.opt.wrap = false
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
