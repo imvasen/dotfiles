@@ -30,15 +30,8 @@ autoload -Uz compinit && compinit
 
 autoload -U select-word-style
 select-word-style bash
-bindkey -e
+bindkey -v
 bindkey "\e[3~" delete-char
-
-clear-scrollback-and-screen () {
-  zle clear-screen
-  tmux clear-history
-}
-zle -N clear-scrollback-and-screen
-bindkey "^i" clear-scrollback-and-screen
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
