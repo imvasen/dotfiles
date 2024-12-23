@@ -33,6 +33,13 @@ select-word-style bash
 bindkey -e
 bindkey "\e[3~" delete-char
 
+clear-scrollback-and-screen () {
+  zle clear-screen
+  tmux clear-history
+}
+zle -N clear-scrollback-and-screen
+bindkey "^i" clear-scrollback-and-screen
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -76,6 +83,7 @@ HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
+HISTORY_IGNORE="ls:z:z -:z ..:cd:cd -:cd ..:cd ~:pwd:exit:clear:history"
 setopt appendhistory
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
