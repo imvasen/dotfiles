@@ -5,12 +5,13 @@ return {
   ---@type snacks.Config
   opts = {
     bigfile = { enabled = true },
+    input = { enabled = true },
 
     dashboard = {
       enabled = true,
       sections = {
-        { section = "header" },
-        { section = "keys",  gap = 1, padding = 1 },
+        -- { section = "header" },
+        { section = "keys",   gap = 1, padding = 1 },
         {
           pane = 2,
           icon = " ",
@@ -105,7 +106,6 @@ return {
     { "<leader>bd", function() Snacks.bufdelete() end,               desc = "Delete Buffer" },
     { "<leader>cR", function() Snacks.rename.rename_file() end,      desc = "Rename File" },
     { "<leader>gB", function() Snacks.gitbrowse() end,               desc = "Git Browse" },
-    { "<leader>gb", function() Snacks.git.blame_line() end,          desc = "Git Blame Line" },
     { "<leader>gf", function() Snacks.lazygit.log_file() end,        desc = "Lazygit Current File History" },
     { "<leader>gg", function() Snacks.lazygit() end,                 desc = "Lazygit" },
     { "<leader>gl", function() Snacks.lazygit.log() end,             desc = "Lazygit Log (cwd)" },

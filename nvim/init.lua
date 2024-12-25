@@ -34,10 +34,11 @@ vim.keymap.set('n', '<M-p>', ':Telescope find_files<CR>', { silent = true })
 
 vim.keymap.set('n', '<leader>q', ':q<CR>', { silent = true })
 vim.keymap.set('n', '<leader>Q', ':q!<CR>', { silent = true })
-vim.keymap.set('n', '<leader>ww', ':w<CR>', { silent = true })
-vim.keymap.set('n', '<leader>wq', ':wq<CR>', { silent = true })
-vim.keymap.set('n', '<leader>W', ':w!!<CR>', { silent = true })
-vim.keymap.set('n', '<leader>U', ':Lazy sync<CR>', { silent = true })
+vim.keymap.set('n', '<leader>w', ':w<CR>', { silent = true, desc = 'Write' })
+vim.keymap.set('n', '<leader>ww', ':w<CR>', { silent = true, desc = 'Write' })
+vim.keymap.set('n', '<leader>wq', ':wq<CR>', { silent = true, desc = 'Write and quit' })
+vim.keymap.set('n', '<leader>W', ':w!!<CR>', { silent = true, desc = 'Write as sudo' })
+vim.keymap.set('n', '<leader>U', ':Lazy sync<CR>', { silent = true, desc = 'Lazy sync' })
 
 vim.opt.tabstop = 2
 
