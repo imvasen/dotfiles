@@ -39,6 +39,7 @@ vim.keymap.set('n', '<leader>ww', ':w<CR>', { silent = true, desc = 'Write' })
 vim.keymap.set('n', '<leader>wq', ':wq<CR>', { silent = true, desc = 'Write and quit' })
 vim.keymap.set('n', '<leader>W', ':w!!<CR>', { silent = true, desc = 'Write as sudo' })
 vim.keymap.set('n', '<leader>U', ':Lazy sync<CR>', { silent = true, desc = 'Lazy sync' })
+vim.keymap.set('n', '<leader>r', ':reg<CR>', { silent = true, desc = 'Show registers' })
 
 vim.opt.tabstop = 2
 

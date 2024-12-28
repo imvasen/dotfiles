@@ -6,6 +6,7 @@ return {
   opts = {
     bigfile = { enabled = true },
     input = { enabled = true },
+    scope = { enabled = true },
 
     dashboard = {
       enabled = true,
