@@ -13,7 +13,7 @@ return {
     local dbee = require("dbee")
     dbee.setup()
 
-    vim.keymap.set('n', '<leader>db', '<cmd>lua require("dbee").toggle()<CR>', { noremap = true, silent = true })
+    vim.keymap.set('n', '<leader>db', dbee.toggle, { noremap = true, silent = true })
     local wk = require('which-key')
     wk.add({
       { '<leader>db', desc = "Toggle dbee", icon = " " },

@@ -29,7 +29,8 @@ config.keys = {
 config.macos_window_background_blur = 30
 
 -- colors
-config.color_scheme = "tokyonight_night"
+config.color_scheme = "Tokyo Night"
+config.window_background_opacity = 0.85
 
 config.default_cursor_style = "BlinkingUnderline"
 config.cursor_blink_rate = 250
