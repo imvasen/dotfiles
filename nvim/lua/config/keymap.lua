@@ -30,6 +30,6 @@ wk.add({
   { '<leader>W', desc = 'Write as sudo', icon = '󰽂 ' },
   { '<leader>U', desc = 'Lazy sync', icon = ' ' },
   { '<leader>r', desc = 'Show registers', icon = ' ' },
-  { '<leader>e', desc = 'Harpoon explore', icon = '󱡀 ' },
-  { '<leader>a', desc = 'Harpoon add', icon = '󱡀 ' },
+  { '<leader>ee', desc = 'Harpoon explore', icon = '󱡀 ' },
+  { '<leader>ea', desc = 'Harpoon add', icon = '󱡀 ' },
 })
