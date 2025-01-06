@@ -20,6 +20,7 @@ vim.keymap.set('n', '<leader>wq', ':wq<CR>', { silent = true, desc = 'Write and 
 vim.keymap.set('n', '<leader>W', ':w!!<CR>', { silent = true, desc = 'Write as sudo' })
 vim.keymap.set('n', '<leader>U', ':Lazy sync<CR>', { silent = true, desc = 'Lazy sync' })
 vim.keymap.set('n', '<leader>r', ':reg<CR>', { silent = true, desc = 'Show registers' })
+vim.keymap.set('n', '<leader>et', ':NvimTreeToggle<CR>', { silent = true, desc = 'Toggle file tree' })
 
 wk.add({
   { '<leader>q', desc = 'Quit', icon = '󰈆 ' },
@@ -32,4 +33,5 @@ wk.add({
   { '<leader>r', desc = 'Show registers', icon = ' ' },
   { '<leader>ee', desc = 'Harpoon explore', icon = '󱡀 ' },
   { '<leader>ea', desc = 'Harpoon add', icon = '󱡀 ' },
+  { '<leader>et', desc = 'Toggle file tree', icon = ' ' },
 })
