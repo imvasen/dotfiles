@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Attaches to the tmux session specified in command
+# Note: tm must exist in host
+# Usage
+#   - mosht host session-name
+
+mosh $1 -- tm $2
