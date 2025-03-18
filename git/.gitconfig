@@ -46,7 +46,7 @@
 	# Force push (e.g. amends)
 	pf = push -f
 
-	pl = pull
+	pl = pull --rebase
 
 	rb = rebase
 	rbc = rebase --continue
