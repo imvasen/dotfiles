@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+selected_file=$(fzf --preview='bat --style=numbers --color=always --line-range :500 {}')
+
+if [ -n "$selected_file" ]; then
+  nvim "$selected_file"
+else
+  exit 1
+fi
