@@ -38,7 +38,7 @@ bindkey "\e[3~" delete-char
 
 alias pip=pip3
 alias py=python3
-alias nv=nvim
+alias n=nvim
 alias ping=gping
 alias lg=lazygit
 alias pi='pnpm install -C'
@@ -47,8 +47,10 @@ alias prun='pnpm -C'
 alias piw='pnpm -w install'
 alias ls='eza --icons=always'
 alias l='eza -la --icons=always'
+alias lt='eza -la --icons=always --tree'
 alias g=git
 alias z=cd
+alias f=yazi
 
 export GPG_TTY="$TTY"
 
@@ -100,3 +102,4 @@ eval "$(fzf --zsh)"
 
 # Smart cd
 eval "$(zoxide init --cmd cd zsh)"
+
