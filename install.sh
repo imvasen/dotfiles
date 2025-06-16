@@ -31,6 +31,14 @@ cp -r nvim ~/.config
 [[ ! -f ~/.gitconfig ]] || cp ~/.gitconfig ~/.gitconfig.bkp
 cp git/.gitconfig ~
 
+# themes
+cp -r bat ~/.config
+bat cache --build
+cp -r lazygit ~/.config
+cp -r eza ~/.config
+ln -se ~/.config/eza/tokyonight.yml ~/.config/eza/theme.yml
+cp -r yazi ~/.config
+
 # Installing bin
 mkdir -p ~/.bin
 cp bin/* ~/.bin

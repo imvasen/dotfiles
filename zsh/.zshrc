@@ -1,3 +1,5 @@
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -15,6 +17,31 @@ if [ ! -d "$ZINIT_HOME" ]; then
 fi
 
 source "${ZINIT_HOME}/zinit.zsh"
+
+export EZA_CONFIG_DIR=$HOME/.config/eza
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  --highlight-line \
+  --info=inline-right \
+  --ansi \
+  --layout=reverse \
+  --border=none \
+  --color=bg+:#283457 \
+  --color=bg:#16161e \
+  --color=border:#27a1b9 \
+  --color=fg:#c0caf5 \
+  --color=gutter:#16161e \
+  --color=header:#ff9e64 \
+  --color=hl+:#2ac3de \
+  --color=hl:#2ac3de \
+  --color=info:#545c7e \
+  --color=marker:#ff007c \
+  --color=pointer:#ff007c \
+  --color=prompt:#2ac3de \
+  --color=query:#c0caf5:regular \
+  --color=scrollbar:#27a1b9 \
+  --color=separator:#ff9e64 \
+  --color=spinner:#ff007c \
+"
 
 # Share history
 setopt inc_append_history
@@ -51,6 +78,8 @@ alias lt='eza -la --icons=always --tree'
 alias g=git
 alias z=cd
 alias f=yazi
+alias fzf-preview="fzf --preview='bat --style=numbers --color=always --line-range :500 {}'"
+alias ff="fzf --preview='bat --style=numbers --color=always --line-range :500 {}'"
 
 export GPG_TTY="$TTY"
 
@@ -102,4 +131,6 @@ eval "$(fzf --zsh)"
 
 # Smart cd
 eval "$(zoxide init --cmd cd zsh)"
+
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
