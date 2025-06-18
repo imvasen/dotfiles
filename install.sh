@@ -17,10 +17,13 @@ mkdir -p $XDG_STATE_HOME
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle
 
-mkdir -p ~/.installed-stuff
+# Installing bin
+mkdir -p ~/.local/bin
+cp bin/* ~/.local/bin
+chmod +x ~/.local/bin/*
 
 # My terminal
-cp wezterm/.wezterm.lua ~
+cp wezterm $XDG_CONFIG_HOME
 
 # Zsh
 [[ ! -f ~/.zshrc ]] || cp ~/.zshrc ~/.zshrc.bkp
@@ -46,11 +49,6 @@ bash scripts/config_bat.sh
 cp -r eza $XDG_CONFIG_HOME
 ln -sf $XDG_CONFIG_HOME/eza/tokyonight.yml $XDG_CONFIG_HOME/eza/theme.yml
 cp -r yazi $XDG_CONFIG_HOME
-
-# Installing bin
-mkdir -p ~/.bin
-cp bin/* ~/.bin
-chmod +x ~/.bin/*
 
 # Karabiner
 mkdir -p $XDG_CONFIG_HOME/karabiner
