@@ -38,6 +38,9 @@ cp zsh/.p10k.zsh ~
 # neovim
 bash scripts/config_nvim.sh
 
+# nvm
+bash scripts/config_nvm.sh
+
 # Git
 bash scripts/config_git.sh
 

@@ -9,10 +9,9 @@ export EDITOR=nvim
 export GPG_TTY=$TTY
 export LC_ALL=en_US.UTF-8
 
-export PATH="$PATH:$HOME/.bin"
+export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
 
 # Specific programs
-export NVM_DIR="$HOME/.nvm"
 export EZA_CONFIG_DIR=$XDG_CONFIG_HOME/eza
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
@@ -37,6 +36,8 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=separator:#ff9e64 \
   --color=spinner:#ff007c \
 "
+export AWS_SHARED_CREDENTIALS_FILE=$XDG_CONFIG_HOME/aws/credentials
+export AWS_CONFIG_FILE=$XDG_CONFIG_HOME/aws/config
 
 export SB_API_TOKEN=""
 export SB_APP_TOKEN=""
