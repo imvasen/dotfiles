@@ -25,25 +25,6 @@ Some utilities are contained in bin:
 - `tma` - Creates a tmux session (e.g. `tma session-name`).
 - `nv` - NeoVim
 
-## tmux
-
-I use tmux a lot. It comes handy when doing any kind of terminal stuff. My
-preferred flavor is the one [Grégory Pakosz][gregory] adds. I found his
-[tmux repo][gregory-tmux] superb.
-
-> In order for tmux to work with treemux extension, you need to install
-> `pynvim` in your python environment. For MacOS with brew, you can use:
-> `pip --break-system-packages install pynvim`.
-
 ## Thanks
 
 This repository was inspired by all those open source dotfiles around.
-
-Special mentions to:
-
-- [Grégory Pakosz][gregory].
-- [Adam Hawkins][adam-dotfiles]
-
-[adam-dotfiles]: https://github.com/ahawkins/dotfiles
-[gregory]: https://github.com/gpakosz
-[gregory-tmux]: https://github.com/gpakosz/.tmux

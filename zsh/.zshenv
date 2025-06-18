@@ -9,9 +9,10 @@ export EDITOR=nvim
 export GPG_TTY=$TTY
 export LC_ALL=en_US.UTF-8
 
-export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Specific programs
+export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
 export EZA_CONFIG_DIR=$XDG_CONFIG_HOME/eza
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \

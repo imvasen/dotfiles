@@ -66,9 +66,6 @@ export PATH="$PATH:/opt/homebrew/opt/mysql-client@8.4/bin"
 # Obstack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
-# Virtualenvwrapper
-source virtualenvwrapper.sh
-
 HISTSIZE=5000
 # Use XDG dirs for completion and history files
 [ -d "$XDG_STATE_HOME"/zsh ] || mkdir -p "$XDG_STATE_HOME"/zsh
