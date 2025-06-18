@@ -30,10 +30,11 @@ cp wezterm $XDG_CONFIG_HOME
 [[ ! -f ~/.zshenv ]] || cp ~/.zshenv ~/.zshenv.bkp
 [[ ! -f ~/.zprofile ]] || cp ~/.zprofile ~/.zprofile.bkp
 
+mkdir -p $XDG_CONFIG_HOME/zsh
 cp zsh/.zshrc ~
 cp zsh/.zprofile ~
 cp zsh/.zshenv ~
-cp zsh/.p10k.zsh ~
+cp zsh/p10k.zsh $XDG_CONFIG_HOME/zsh
 
 # neovim
 bash scripts/config_nvim.sh
