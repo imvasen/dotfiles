@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euxo pipefail
+set -exo pipefail
 
 # Check XDG exists
 if [ -z "$XDG_CONFIG_HOME" ]; then
@@ -14,5 +14,6 @@ cp -R nvim $XDG_CONFIG_HOME/nvim
 
 # For the snacks dashboard
 git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git /tmp/pokemon-colorscripts
-chmod +x /tmp/pokemon-colorscripts/pokemon-colorscripts/pokemon-colorscripts
-sudo /tmp/pokemon-colorscripts/pokemon-colorscripts/install.sh
+cd /tmp/pokemon-colorscripts
+chmod +x /tmp/pokemon-colorscripts/install.sh
+sudo ./install.sh

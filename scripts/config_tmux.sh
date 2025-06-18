@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euxo pipefail
+set -exo pipefail
 
 # Check XDG exists
 if [ -z "$XDG_CONFIG_HOME" ]; then

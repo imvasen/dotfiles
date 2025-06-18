@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-set -euxo pipefail
+set -exo pipefail
 
 echo "Running installation"
 
-source ./zsh/zshenv
+source ./zsh/.zshenv
 
 echo "Creating XDG directories"
 mkdir -p $XDG_DATA_HOME
@@ -36,7 +36,7 @@ cp zsh/.p10k.zsh ~
 bash scripts/config_nvim.sh
 
 # Git
-bash scripts/install_git_config.sh
+bash scripts/config_git.sh
 
 # tmux
 bash scripts/config_tmux.sh
@@ -44,7 +44,7 @@ bash scripts/config_tmux.sh
 # themes
 bash scripts/config_bat.sh
 cp -r eza $XDG_CONFIG_HOME
-ln -se $XDG_CONFIG_HOME/eza/tokyonight.yml $XDG_CONFIG_HOME/eza/theme.yml
+ln -sf $XDG_CONFIG_HOME/eza/tokyonight.yml $XDG_CONFIG_HOME/eza/theme.yml
 cp -r yazi $XDG_CONFIG_HOME
 
 # Installing bin

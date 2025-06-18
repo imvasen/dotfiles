@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euxo pipefail
+set -exo pipefail
 
 # Check XDG exists
 if [ -z "$XDG_CONFIG_HOME" ]; then
@@ -10,5 +10,6 @@ fi
 
 echo "Installing bat config"
 
+# For debian/ubuntu, bat is installed as batcat
 cp -R bat $XDG_CONFIG_HOME/bat
 bat cache --build
