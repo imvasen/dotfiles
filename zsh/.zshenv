@@ -13,6 +13,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Specific programs
 export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
+export NODE_REPL_HISTORY=$XDG_DATA_HOME/node_repl_history
 export EZA_CONFIG_DIR=$XDG_CONFIG_HOME/eza
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
