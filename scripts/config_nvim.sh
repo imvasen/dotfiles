@@ -14,6 +14,11 @@ cp -R nvim $XDG_CONFIG_HOME/nvim
 
 # For the snacks dashboard
 git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git /tmp/pokemon-colorscripts
+CUR_DIR=$(pwd)
 cd /tmp/pokemon-colorscripts
 chmod +x /tmp/pokemon-colorscripts/install.sh
 sudo ./install.sh
+cd $CUR_DIR
+
+gh login auth
+gh ext instal meiji163/gh-notify
