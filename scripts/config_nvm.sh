@@ -10,5 +10,6 @@ fi
 
 echo "Installing nvm"
 
+cp -R npm $XDG_CONFIG_HOME
 mkdir -p $NVM_DIR
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
