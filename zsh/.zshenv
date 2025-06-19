@@ -12,7 +12,7 @@ export LC_ALL=en_US.UTF-8
 export PATH="$HOME/.local/bin:$PATH"
 
 # Specific programs
-export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
+export NVM_DIR="$XDG_CONFIG_HOME/nvm"
 export NODE_REPL_HISTORY=$XDG_DATA_HOME/node_repl_history
 export GOPATH="$XDG_DATA_HOME"/go
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
@@ -50,6 +50,6 @@ export SB_ACCOUNT=""
 export TN_API_TOKEN=""
 export TN_IDENTITY=""
 
-export PYTHONPATH="$PYTHON_PATH:/Users/vasen/Developer/reps"
+export PYTHONPATH="$PYTHON_PATH:$HOME/Developer/reps"
 export REPS_ENV=dev
 export REPS_CONFIG_FILE=$HOME/Developer/reps/reps.yaml

@@ -12,10 +12,17 @@ mkdir -p $XDG_CONFIG_HOME
 mkdir -p $XDG_CACHE_HOME
 mkdir -p $XDG_STATE_HOME
 
-# TODO: Only on mac
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
-brew bundle
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  echo "Detected MacOS - running MacOS-specific setup..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  brew bundle
+elif [[ -f /etc/os-release ]] && grep -q "^ID=arch" /etc/os-release; then
+  echo "Detected Arch Linux - running Arch-specific setup..."
+  bash scripts/install_deps_arch.sh
+else
+  echo "Unsupported operating system"
+fi
 
 # Installing bin
 mkdir -p ~/.local/bin
@@ -23,7 +30,7 @@ cp bin/* ~/.local/bin
 chmod +x ~/.local/bin/*
 
 # My terminal
-cp wezterm $XDG_CONFIG_HOME
+cp -r wezterm $XDG_CONFIG_HOME
 
 # Zsh
 [[ ! -f ~/.zshrc ]] || cp ~/.zshrc ~/.zshrc.bkp
