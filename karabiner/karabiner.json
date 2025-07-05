@@ -9,7 +9,10 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com\\.github\\.wez\\.wezterm$"],
+                    "bundle_identifiers": [
+                      "^com\\.github\\.wez\\.wezterm$",
+                      "^com\\.mitchellh\\.ghostty$"
+                    ],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -31,7 +34,10 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com\\.github\\.wez\\.wezterm$"],
+                    "bundle_identifiers": [
+                      "^com\\.github\\.wez\\.wezterm$",
+                      "^com\\.mitchellh\\.ghostty$"
+                    ],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -53,7 +59,10 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com\\.github\\.wez\\.wezterm$"],
+                    "bundle_identifiers": [
+                      "^com\\.github\\.wez\\.wezterm$",
+                      "^com\\.mitchellh\\.ghostty$"
+                    ],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -220,4 +229,3 @@
     }
   ]
 }
-

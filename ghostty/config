@@ -1,0 +1,11 @@
+window-inherit-font-size = false
+window-decoration = none
+theme = "tokyonight_moon"
+background-opacity = 0.9
+background-blur = 70
+shell-integration-features = no-cursor
+cursor-style = underline
+font-family = "CaskaydiaCove Nerd Font"
+font-size = 16
+macos-option-as-alt = true
+
