@@ -26,14 +26,9 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light Aloxaf/fzf-tab
 
-autoload -Uz compinit && compinit
 
-autoload -U select-word-style
-select-word-style bash
-bindkey -v
-bindkey "\e[3~" delete-char
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# To customize prompt, run `p10k configure` or edit p10k.zsh.
 [[ ! -f $XDG_CONFIG_HOME/zsh/p10k.zsh ]] || source $XDG_CONFIG_HOME/zsh/p10k.zsh
 
 alias pip=pip3
@@ -53,6 +48,7 @@ alias z=cd
 alias f=yazi
 alias fzf-preview="fzf --preview='bat --style=numbers --color=always --line-range :500 {}'"
 alias ff="fzf --preview='bat --style=numbers --color=always --line-range :500 {}'"
+alias kubelogin=kubectl-oidc_login
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
@@ -68,10 +64,10 @@ source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
 HISTSIZE=5000
 # Use XDG dirs for completion and history files
-[ -d "$XDG_STATE_HOME"/zsh ] || mkdir -p "$XDG_STATE_HOME"/zsh
-HISTFILE="$XDG_STATE_HOME"/zsh/history
-[ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
-compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
+[ -d "$XDG_STATE_HOME"/zsh ] || mkdir -p $XDG_STATE_HOME/zsh
+HISTFILE=$XDG_STATE_HOME/zsh/history
+[ -d $XDG_CACHE_HOME/zsh ] || mkdir -p $XDG_CACHE_HOME/zsh
+autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 HISTORY_IGNORE="ls:z:z -:z ..:cd:cd -:cd ..:cd ~:pwd:exit:clear:history"
@@ -81,6 +77,10 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+autoload -U select-word-style
+select-word-style bash
+bindkey -v
+bindkey "\e[3~" delete-char
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
@@ -102,3 +102,6 @@ eval "$(zoxide init --cmd cd zsh)"
 
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

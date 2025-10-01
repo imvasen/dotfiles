@@ -43,14 +43,5 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 "
 export AWS_SHARED_CREDENTIALS_FILE=$XDG_CONFIG_HOME/aws/credentials
 export AWS_CONFIG_FILE=$XDG_CONFIG_HOME/aws/config
+export TLDR_CONFIG= 
 
-export SB_API_TOKEN=""
-export SB_APP_TOKEN=""
-export SB_ACCOUNT=""
-
-export TN_API_TOKEN=""
-export TN_IDENTITY=""
-
-export PYTHONPATH="$PYTHON_PATH:$HOME/Developer/reps"
-export REPS_ENV=dev
-export REPS_CONFIG_FILE=$HOME/Developer/reps/reps.yaml
