@@ -7,5 +7,5 @@ shell-integration-features = no-cursor
 cursor-style = underline
 font-family = "CaskaydiaCove Nerd Font"
 font-size = 16
-macos-option-as-alt = true
+macos-option-as-alt = left
 
