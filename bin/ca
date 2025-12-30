@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+# Cursor Agent wrapper that selects API key from .zshenv
+# Usage: ca <TOKEN_PREFIX> [cursor-agent args...]
+# Example: ca DEV --help
+
+if [[ $# -eq 0 ]]; then
+  echo "Usage: ca <TOKEN_PREFIX> [cursor-agent args...]"
+  echo "Example: ca DEV"
+  exit 1
+fi
+
+local prefix="$1"
+local var_name="${prefix}_CURSOR_API_KEY"
+local api_key="${(P)var_name}"
+
+if [[ -z "$api_key" ]]; then
+  echo "Error: ${var_name} not set in .zshenv" >&2
+  exit 1
+fi
+
+# Pass the API key as environment variable and forward remaining arguments
+CURSOR_API_KEY="$api_key" cursor-agent "$@[2,-1]"

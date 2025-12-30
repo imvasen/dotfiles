@@ -57,8 +57,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-export PATH="$PATH:/opt/homebrew/opt/mysql-client@8.4/bin"
-
 # Obstack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
@@ -101,6 +99,8 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+# For pre-released nvim to work instead of brew one
+export PATH="$HOME/.local/bin:$PATH"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
